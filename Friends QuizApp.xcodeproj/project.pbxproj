@@ -9,21 +9,25 @@
 /* Begin PBXBuildFile section */
 		AB4274F928356B2000DA9033 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4274F828356B2000DA9033 /* AppDelegate.swift */; };
 		AB4274FB28356B2000DA9033 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4274FA28356B2000DA9033 /* SceneDelegate.swift */; };
-		AB4274FD28356B2000DA9033 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4274FC28356B2000DA9033 /* ViewController.swift */; };
+		AB4274FD28356B2000DA9033 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4274FC28356B2000DA9033 /* HomeViewController.swift */; };
 		AB42750028356B2000DA9033 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB4274FE28356B2000DA9033 /* Main.storyboard */; };
 		AB42750228356B2400DA9033 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB42750128356B2400DA9033 /* Assets.xcassets */; };
 		AB42750528356B2400DA9033 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB42750328356B2400DA9033 /* LaunchScreen.storyboard */; };
+		AB4275102836C40800DA9033 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB42750F2836C40800DA9033 /* GameViewController.swift */; };
+		AB4275122837564800DA9033 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4275112837564800DA9033 /* ResultViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AB4274F528356B2000DA9033 /* Friends QuizApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Friends QuizApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB4274F828356B2000DA9033 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AB4274FA28356B2000DA9033 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AB4274FC28356B2000DA9033 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AB4274FC28356B2000DA9033 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		AB4274FF28356B2000DA9033 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AB42750128356B2400DA9033 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AB42750428356B2400DA9033 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AB42750628356B2400DA9033 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AB42750F2836C40800DA9033 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		AB4275112837564800DA9033 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +62,39 @@
 			children = (
 				AB4274F828356B2000DA9033 /* AppDelegate.swift */,
 				AB4274FA28356B2000DA9033 /* SceneDelegate.swift */,
-				AB4274FC28356B2000DA9033 /* ViewController.swift */,
-				AB4274FE28356B2000DA9033 /* Main.storyboard */,
+				AB42750E2836C30F00DA9033 /* Model */,
+				AB42750C28356B4200DA9033 /* View */,
+				AB42750D28356BAD00DA9033 /* Controller */,
 				AB42750128356B2400DA9033 /* Assets.xcassets */,
 				AB42750328356B2400DA9033 /* LaunchScreen.storyboard */,
 				AB42750628356B2400DA9033 /* Info.plist */,
 			);
 			path = "Friends QuizApp";
+			sourceTree = "<group>";
+		};
+		AB42750C28356B4200DA9033 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AB4274FE28356B2000DA9033 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AB42750D28356BAD00DA9033 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AB4274FC28356B2000DA9033 /* HomeViewController.swift */,
+				AB42750F2836C40800DA9033 /* GameViewController.swift */,
+				AB4275112837564800DA9033 /* ResultViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		AB42750E2836C30F00DA9033 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +168,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB4274FD28356B2000DA9033 /* ViewController.swift in Sources */,
+				AB4275122837564800DA9033 /* ResultViewController.swift in Sources */,
+				AB4275102836C40800DA9033 /* GameViewController.swift in Sources */,
+				AB4274FD28356B2000DA9033 /* HomeViewController.swift in Sources */,
 				AB4274F928356B2000DA9033 /* AppDelegate.swift in Sources */,
 				AB4274FB28356B2000DA9033 /* SceneDelegate.swift in Sources */,
 			);
