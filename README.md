@@ -16,14 +16,17 @@ If the user gets 3 questions wrong than the game will be over.
   <img src="https://user-images.githubusercontent.com/49269198/169708493-686aabde-49ce-4696-96e1-b9154c9c6833.jpg" width="250" />
 </p>
 
+## The app also supports landscape mode
+<p float="left" align="middle" padding="5">
+  <img src="https://user-images.githubusercontent.com/49269198/169708981-1997f623-d14d-4578-910d-ce031f12d744.jpg" width="600" />
+</p>
+
 ## The result screen
 At the end of the game the result screen will show the number of points the user got. 
 The result will be saved to the Firestore if its higher than the current HighScore.
-
 <p float="left" align="middle" padding="5">
   <img src="https://user-images.githubusercontent.com/49269198/169708594-76461716-f318-45be-aa0b-505517beacb0.jpg" width="250" />
 </p>
-
 
 ## Firestore Database 
 <p float="left" align="middle" padding="5">
