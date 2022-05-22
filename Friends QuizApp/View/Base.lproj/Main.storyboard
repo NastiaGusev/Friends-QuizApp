@@ -25,7 +25,7 @@
                                     <color key="baseBackgroundColor" red="0.91223186249999999" green="0.1158787981" blue="0.13546159860000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="qsa-oJ-Lc4" kind="show" id="pTC-xK-jXA"/>
+                                    <segue destination="qsa-oJ-Lc4" kind="show" identifier="StartToGame" id="pTC-xK-jXA"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="friends_logo" translatesAutoresizingMaskIntoConstraints="NO" id="cR8-te-RdL">
@@ -38,7 +38,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MjW-D0-bN2">
                                 <rect key="frame" x="126" y="476" width="162" height="40"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="High score: " textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bgd-N7-d2V">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="High score:" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Bgd-N7-d2V">
                                         <rect key="frame" x="0.0" y="0.0" width="102" height="40"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
@@ -49,7 +49,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="10/15" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fvr-NH-BTM">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fvr-NH-BTM">
                                         <rect key="frame" x="102" y="0.0" width="60" height="40"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
@@ -75,6 +75,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="reh-Ty-YWw"/>
+                    <connections>
+                        <outlet property="highScore" destination="fvr-NH-BTM" id="Cr4-Hn-WTM"/>
+                        <outlet property="highScoreTitle" destination="Bgd-N7-d2V" id="DLT-RB-Sl6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -133,7 +137,7 @@
                                                             <constraint firstAttribute="width" constant="120" id="xjs-vY-s5M"/>
                                                         </constraints>
                                                     </stackView>
-                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="1/10" textAlignment="right" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IBt-lz-4EV">
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="1/10" textAlignment="right" translatesAutoresizingMaskIntoConstraints="NO" id="IBt-lz-4EV">
                                                         <rect key="frame" x="120" y="0.0" width="254" height="40"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <constraints>
@@ -150,6 +154,14 @@
                                             </stackView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="all_the_cheesecakes" translatesAutoresizingMaskIntoConstraints="NO" id="syJ-QU-fVf">
                                                 <rect key="frame" x="20" y="64" width="354" height="470"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="radiusRatio">
+                                                        <real key="value" value="0.25"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="0.0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </imageView>
                                         </subviews>
                                         <constraints>
@@ -163,48 +175,59 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="lrU-Zi-exD">
-                                        <rect key="frame" x="0.5" y="544" width="393" height="170"/>
+                                        <rect key="frame" x="112" y="544" width="170" height="170"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="joO-D8-UX1">
-                                                <rect key="frame" x="0.0" y="0.0" width="393" height="70"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="170" height="70"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GIp-WC-KUH">
-                                                        <rect key="frame" x="0.0" y="0.0" width="181.5" height="70"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
                                                         <color key="tintColor" red="0.01269442495" green="0.62860125300000003" blue="0.81640237569999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="filled" title="The One Where Ross And Joey Climb the Fire Escape" titleAlignment="center">
-                                                            <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
-                                                            <color key="baseBackgroundColor" red="0.01269442495" green="0.62860125300000003" blue="0.81640237569999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <buttonConfiguration key="configuration" style="filled" title="Option1" titleAlignment="center">
+                                                            <fontDescription key="titleFontDescription" type="system" pointSize="12"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="optionClicked:" destination="qsa-oJ-Lc4" eventType="touchUpInside" id="3Ji-iz-kiL"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xgt-Lj-4cZ">
-                                                        <rect key="frame" x="211.5" y="0.0" width="181.5" height="70"/>
+                                                        <rect key="frame" x="100" y="0.0" width="70" height="70"/>
                                                         <color key="tintColor" red="0.01269442495" green="0.62860125300000003" blue="0.81640237569999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled" title="Option2">
-                                                            <color key="baseBackgroundColor" red="0.01269442495" green="0.62860125300000003" blue="0.81640237569999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <fontDescription key="titleFontDescription" type="system" pointSize="12"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="optionClicked:" destination="qsa-oJ-Lc4" eventType="touchUpInside" id="w0E-DB-3bl"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="eDM-Gc-6eC">
-                                                <rect key="frame" x="0.0" y="100" width="393" height="70"/>
+                                                <rect key="frame" x="0.0" y="100" width="170" height="70"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DY7-wd-rYZ">
-                                                        <rect key="frame" x="0.0" y="0.0" width="181.5" height="70"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
                                                         <color key="tintColor" red="0.01269442495" green="0.62860125300000003" blue="0.81640237569999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled" title="Option3">
-                                                            <color key="baseBackgroundColor" red="0.01269442495" green="0.62860125300000003" blue="0.81640237569999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <fontDescription key="titleFontDescription" type="system" pointSize="12"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="optionClicked:" destination="qsa-oJ-Lc4" eventType="touchUpInside" id="e5E-SC-Suw"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eS7-AR-Zas">
-                                                        <rect key="frame" x="211.5" y="0.0" width="181.5" height="70"/>
+                                                        <rect key="frame" x="100" y="0.0" width="70" height="70"/>
                                                         <color key="tintColor" red="0.01269442495" green="0.62860125300000003" blue="0.81640237569999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled" title="Option4">
-                                                            <color key="baseBackgroundColor" red="0.01269442495" green="0.62860125300000003" blue="0.81640237569999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <fontDescription key="titleFontDescription" type="system" pointSize="11"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="optionClicked:" destination="qsa-oJ-Lc4" eventType="touchUpInside" id="E1g-I9-1bI"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -231,7 +254,17 @@
                     </view>
                     <navigationItem key="navigationItem" id="U3k-CC-cSU"/>
                     <connections>
-                        <segue destination="zfD-fR-Tdl" kind="show" id="qsV-Tf-Ila"/>
+                        <outlet property="heart1" destination="Ya2-ni-gFc" id="NM9-fC-8cy"/>
+                        <outlet property="heart2" destination="YO6-Xh-nE9" id="Jhe-Mh-Vcx"/>
+                        <outlet property="heart3" destination="gbP-N2-OBH" id="FSw-k8-nHT"/>
+                        <outlet property="imageView" destination="syJ-QU-fVf" id="Ooe-Tw-Yso"/>
+                        <outlet property="option1" destination="GIp-WC-KUH" id="BAz-AD-W3T"/>
+                        <outlet property="option2" destination="xgt-Lj-4cZ" id="xs5-Wb-wpz"/>
+                        <outlet property="option3" destination="DY7-wd-rYZ" id="uDr-Fw-dB4"/>
+                        <outlet property="option4" destination="eS7-AR-Zas" id="9HJ-94-7M5"/>
+                        <outlet property="progressBar" destination="MPF-QM-XbS" id="Iwq-Yb-UuT"/>
+                        <outlet property="questionProgress" destination="IBt-lz-4EV" id="JGv-TB-l6U"/>
+                        <segue destination="zfD-fR-Tdl" kind="show" identifier="GameToResult" id="qsV-Tf-Ila"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AQH-v9-NjN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -275,6 +308,9 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Start over">
                                     <color key="baseBackgroundColor" red="0.91223186249999999" green="0.1158787981" blue="0.13546159860000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="startOverPressed:" destination="zfD-fR-Tdl" eventType="touchUpInside" id="oZQ-e5-zkQ"/>
+                                </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Your Score:" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="cA1-gX-7K7">
                                 <rect key="frame" x="0.0" y="342.5" width="414" height="30"/>
@@ -286,7 +322,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Your knowledge of friends is execptional! " textAlignment="center" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NyX-pl-yQH">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Your knowledge of friends is execptional! " textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="NyX-pl-yQH">
                                 <rect key="frame" x="10" y="473.5" width="394" height="128"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
@@ -319,6 +355,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="P4d-YX-WOl"/>
+                    <connections>
+                        <outlet property="message" destination="NyX-pl-yQH" id="jhy-GD-0sU"/>
+                        <outlet property="score" destination="LIK-e6-kLU" id="fPr-xh-yjA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qta-JQ-Zqa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

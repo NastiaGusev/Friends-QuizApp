@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		0F11F4D1F4EDF61D87BC875A /* Pods_Friends_QuizApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD08056D6A86D687B335CAB8 /* Pods_Friends_QuizApp.framework */; };
 		AB0627C82839147E00488712 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AB0627C72839147E00488712 /* GoogleService-Info.plist */; };
+		AB0627CA28391A6400488712 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0627C928391A6400488712 /* Constants.swift */; };
+		AB0627CC2839326100488712 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0627CB2839326100488712 /* Question.swift */; };
+		AB0627CF28393F4E00488712 /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0627CE28393F4E00488712 /* GameManager.swift */; };
 		AB4274F928356B2000DA9033 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4274F828356B2000DA9033 /* AppDelegate.swift */; };
 		AB4274FB28356B2000DA9033 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4274FA28356B2000DA9033 /* SceneDelegate.swift */; };
 		AB4274FD28356B2000DA9033 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4274FC28356B2000DA9033 /* HomeViewController.swift */; };
@@ -23,6 +26,9 @@
 		1179B7B2239B1A166E70E0BD /* Pods-Friends QuizApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Friends QuizApp.release.xcconfig"; path = "Target Support Files/Pods-Friends QuizApp/Pods-Friends QuizApp.release.xcconfig"; sourceTree = "<group>"; };
 		1BE5744F76047224BEACD385 /* Pods-Friends QuizApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Friends QuizApp.debug.xcconfig"; path = "Target Support Files/Pods-Friends QuizApp/Pods-Friends QuizApp.debug.xcconfig"; sourceTree = "<group>"; };
 		AB0627C72839147E00488712 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		AB0627C928391A6400488712 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		AB0627CB2839326100488712 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		AB0627CE28393F4E00488712 /* GameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameManager.swift; sourceTree = "<group>"; };
 		AB4274F528356B2000DA9033 /* Friends QuizApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Friends QuizApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB4274F828356B2000DA9033 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AB4274FA28356B2000DA9033 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +84,7 @@
 				AB42750328356B2400DA9033 /* LaunchScreen.storyboard */,
 				AB42750628356B2400DA9033 /* Info.plist */,
 				AB0627C72839147E00488712 /* GoogleService-Info.plist */,
+				AB0627C928391A6400488712 /* Constants.swift */,
 			);
 			path = "Friends QuizApp";
 			sourceTree = "<group>";
@@ -103,6 +110,8 @@
 		AB42750E2836C30F00DA9033 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				AB0627CB2839326100488712 /* Question.swift */,
+				AB0627CE28393F4E00488712 /* GameManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -113,7 +122,6 @@
 				1BE5744F76047224BEACD385 /* Pods-Friends QuizApp.debug.xcconfig */,
 				1179B7B2239B1A166E70E0BD /* Pods-Friends QuizApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -242,10 +250,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB4275122837564800DA9033 /* ResultViewController.swift in Sources */,
+				AB0627CF28393F4E00488712 /* GameManager.swift in Sources */,
 				AB4275102836C40800DA9033 /* GameViewController.swift in Sources */,
 				AB4274FD28356B2000DA9033 /* HomeViewController.swift in Sources */,
 				AB4274F928356B2000DA9033 /* AppDelegate.swift in Sources */,
 				AB4274FB28356B2000DA9033 /* SceneDelegate.swift in Sources */,
+				AB0627CC2839326100488712 /* Question.swift in Sources */,
+				AB0627CA28391A6400488712 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
